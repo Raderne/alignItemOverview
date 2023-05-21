@@ -1,0 +1,135 @@
+:root {
+  --primary-color: #f8c454;
+  --bg-color: #10160e;
+  --light-bg-color: #1b2119;
+  --text-color: #ebf1e9;
+
+  --btn-color: #1a2317;
+  --border-color: #ebf1e9;
+
+  --active-btn-bg: #daf854;
+  --active-btn-color: #09090c;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  padding-top: 15px;
+  width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .title {
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+.header .title span {
+  color: var(--text-color);
+}
+
+.header .icons i {
+  font-size: 2.1rem;
+  margin-left: 15px;
+}
+
+.overview-box {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 25px;
+  background-color: var(--light-bg-color);
+  border-radius: 6px;
+}
+
+.overview-box .box {
+  position: relative;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+}
+
+.box p {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.box i {
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+.align-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+button {
+  background-color: var(--btn-color);
+  border: none;
+  outline: none;
+  color: var(--border-color);
+  padding: 10px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #314d28;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button.active {
+  background-color: var(--active-btn-bg);
+  color: var(--active-btn-color);
+  border-color: var(--active-btn-color);
+}
+
+.direction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.direction button {
+  width: 49%;
+}
+
+.justify {
+  text-align: right;
+}
